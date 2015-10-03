@@ -1,14 +1,13 @@
 {
     "name": "rdeclare",
     "description": "declaring AJAX RPCs easily",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "keywords": [],
-    "main": "./rdeclare.js",
+    "main": "rdeclare.js",
     "dependencies": {
         "body-parser": "latest"
     },
     "devDependencies": {
-        
     },
     "repository": {
         "type": "git",
