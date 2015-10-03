@@ -1,4 +1,4 @@
-calling AJAX RPCs easily.
+declaring AJAX RPCs easily.  
 rdeclare binds itself to '/rpc-api' 
 
 Example Usage:
@@ -28,6 +28,6 @@ rcall('some_function', ['a', 'b'], function (arg1, arg2) {
     if (!err) {
         console.log(arg1, arg2);
     }
-})
+}, this) /* rcall supports optional binding to a different context */
 ```
 
