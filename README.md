@@ -1,4 +1,4 @@
-calling AJAX RPCs easily.
+declaring AJAX RPCs easily.  
 rdeclare binds itself to '/rpc-api' 
 
 Example Usage:
