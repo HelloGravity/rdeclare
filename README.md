@@ -5,9 +5,9 @@ Example Usage:
 
 **Server**
 ```js
-var app = require('express')();
-var server = require('http').Server(app);
-var rdeclare = require('rdclare')(server);
+var express = require('express');
+var app = express();
+var rdeclare = require('rdclare')(app);
 
 /* Declare RPC method */
 rdeclare('some_function', function(arg1, arg2, cb) {
@@ -25,9 +25,7 @@ var rcall = require('rcall');
 
 /* Call RPC method */
 rcall('some_function', ['a', 'b'], function (arg1, arg2) {
-    if (!err) {
-        console.log(arg1, arg2);
-    }
+    console.log(arg1, arg2);
 }, this) /* rcall supports optional binding to a different context */
 ```
 
