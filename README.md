@@ -1,5 +1,5 @@
-Declaring AJAX RPCs easily.
-rdeclare should be used in the server side along with rcall in the client side.
+Declaring AJAX RPCs easily. 
+rdeclare should be used in the server side along with rcall in the client side. 
 rdeclare binds itself to '/rpc-api'.
 
 API:

@@ -1,7 +1,7 @@
 {
     "name": "rdeclare",
     "description": "declaring AJAX RPCs easily",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "keywords": [],
     "main": "rdeclare.js",
     "dependencies": {
