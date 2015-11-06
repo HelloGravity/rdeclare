@@ -3,8 +3,10 @@ var jsonParser = bodyParser.json();
 
 var rpc_methods = {};
 
-function rdeclare(method_name, method) {
-    rpc_methods[method_name] = method;
+function rdeclare(method_name, method, options) {
+    options = options || {};
+    var args_num = options['length'] || method.length;
+    rpc_methods[method_name] = {method: method, args_num: args_num};
 }
 
 function register_api(app) {
@@ -34,10 +36,10 @@ function register_api(app) {
                 }
             };
         })());
-        if (args.length != rpc_methods[method_name].length) {
+        if (args.length != rpc_methods[method_name].args_num) {
             return res.status(400).send('Arguments number mismatch');   
         }
-        rpc_methods[method_name].apply(null, args);
+        rpc_methods[method_name].method.apply(null, args);
     });
 
     return rdeclare;
